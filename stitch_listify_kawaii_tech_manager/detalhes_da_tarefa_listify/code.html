@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Listify - Detalhes da Tarefa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#50424f",
+                        "inverse-on-surface": "#391e70",
+                        "on-secondary": "#610045",
+                        "surface-bright": "#432879",
+                        "secondary-container": "#880762",
+                        "primary-container": "#831c91",
+                        "primary-fixed-dim": "#fcaaff",
+                        "secondary-fixed": "#ffd8e9",
+                        "on-secondary-fixed": "#3c0029",
+                        "surface-tint": "#fcaaff",
+                        "tertiary-fixed-dim": "#ffafd5",
+                        "on-primary-fixed-variant": "#7a0f88",
+                        "secondary-fixed-dim": "#ffaed8",
+                        "on-tertiary-container": "#ffa5d1",
+                        "surface-variant": "#3e2375",
+                        "background": "#1a0046",
+                        "outline": "#9d8c9a",
+                        "primary-fixed": "#ffd6fc",
+                        "on-secondary-container": "#ff92cf",
+                        "surface": "#1a0046",
+                        "secondary": "#ffaed8",
+                        "surface-container-lowest": "#140039",
+                        "on-primary-container": "#faa0ff",
+                        "surface-container-highest": "#3e2375",
+                        "on-primary-fixed": "#36003e",
+                        "primary": "#fcaaff",
+                        "tertiary-fixed": "#ffd8e8",
+                        "surface-container-high": "#331669",
+                        "inverse-surface": "#eaddff",
+                        "tertiary": "#ffafd5",
+                        "surface-container": "#28065f",
+                        "on-secondary-fixed-variant": "#880762",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-background": "#eaddff",
+                        "on-surface-variant": "#d4c1d1",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#941366",
+                        "on-surface": "#eaddff",
+                        "surface-dim": "#1a0046",
+                        "surface-container-low": "#24005b",
+                        "on-primary": "#580064",
+                        "inverse-primary": "#9631a3",
+                        "on-tertiary-fixed": "#3d0027",
+                        "on-tertiary-fixed-variant": "#89035e",
+                        "on-tertiary": "#620042",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "lg": "40px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "container-padding": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Sora"],
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.1", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .kawaii-shadow {
+            box-shadow: 0 8px 32px 0 rgba(26, 0, 70, 0.37);
+        }
+        .progress-gradient {
+            background: linear-gradient(90deg, #831C91 0%, #D552A3 100%);
+        }
+        body {
+            background-color: #1a0046;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(131, 28, 145, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 112, 191, 0.1) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-50 bg-white/10 dark:bg-surface/10 backdrop-blur-xl border-b border-white/20 dark:border-outline-variant/20 shadow-[0_8px_32px_0_rgba(26,0,70,0.37)]">
+<div class="flex justify-between items-center px-container-padding py-sm w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary font-headline-md text-headline-md drop-shadow-[0_0_8px_rgba(252,170,255,0.8)]">all_inclusive</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary drop-shadow-[0_0_8px_rgba(252,170,255,0.8)]">Listify</h1>
+</div>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-200">notifications</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden active:scale-95 duration-200 transition-transform">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A stylish portrait of a young woman with a creative professional look, set against a soft bokeh background that complements a modern tech aesthetic. The lighting is soft and flattering, emphasizing a friendly and approachable personality. The colors are muted but warm, aligning with a high-end UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxA7rtAoqJ4kTy448ZLygmFCiP6lrdqXbQEp2dA44dtl4v9Ucc51Hw6sUZkJKGWH23AVvaLh50-JtPY4KY10wXdBYnc17EDJEVXula7QA6dL6ixauF8s3RIQzAXdm89RAvTbhGY1p33fvM7gOcCUBT5jScWYqnxOyxg_kRODVPiFJLa9dkHAVXpJYElJsAFaMbUncZftKE6NYpfMjCFTvt1DRrMdS-7if8kzBzy8Q81QpPA0WOiyoe96m39m_vLlpHd5wyk-tIFib5"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto px-container-padding py-lg pb-32">
+<!-- Contextual Utility Bar -->
+<section class="flex justify-between items-center mb-lg glass-panel rounded-lg p-container-padding kawaii-shadow">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container shadow-[0_0_15px_rgba(131,28,145,0.5)] active:scale-90 transition-transform">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">wifi</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">ev_station</span>
+</button>
+</section>
+<!-- Task Details Header -->
+<div class="mb-md">
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Detalhes de suas tarefas:</h2>
+<div class="h-1 w-12 bg-primary-container rounded-full"></div>
+</div>
+<!-- Task Panels Bento Style -->
+<div class="space-y-md mb-xl">
+<!-- Task 1 -->
+<div class="glass-panel rounded-lg p-container-padding kawaii-shadow border-l-4 border-primary">
+<p class="font-body-md text-on-surface leading-relaxed">
+<strong class="text-primary-fixed">Hora do Sorvete:</strong> levar o filho pra tomar sorvete depois da escola.
+                </p>
+</div>
+<!-- Task 2 -->
+<div class="glass-panel rounded-lg p-container-padding kawaii-shadow border-l-4 border-tertiary">
+<p class="font-body-md text-on-surface leading-relaxed">
+<strong class="text-tertiary-fixed">Ir no shopping:</strong> comprar o presente do dia das mães
+                </p>
+</div>
+<!-- Task 3 -->
+<div class="glass-panel rounded-lg p-container-padding kawaii-shadow border-l-4 border-secondary">
+<p class="font-body-md text-on-surface leading-relaxed">
+<strong class="text-secondary-fixed">Aula de box:</strong> Professor novo vai iniciar.
+                </p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-sm mb-xl">
+<button class="w-full py-md px-container-padding rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_4px_16px_rgba(131,28,145,0.4)] hover:brightness-110 active:scale-[0.98] transition-all">
+                Concluída
+            </button>
+<button class="w-full py-md px-container-padding rounded-full border-2 border-secondary text-secondary font-label-md text-label-md hover:bg-secondary/10 active:scale-[0.98] transition-all">
+                Editar
+            </button>
+<button class="w-full py-md px-container-padding rounded-full border-2 border-error text-error font-label-md text-label-md hover:bg-error/10 active:scale-[0.98] transition-all">
+                Excluir
+            </button>
+</div>
+<!-- Metrics Section -->
+<section class="glass-panel rounded-xl p-container-padding kawaii-shadow overflow-hidden relative">
+<div class="flex justify-between items-end mb-md">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-xs">Progresso Semanal</p>
+<h3 class="font-headline-md text-headline-md text-primary">70% Concluído</h3>
+</div>
+<div class="text-right">
+<span class="text-tertiary font-bold">14/20</span>
+</div>
+</div>
+<div class="space-y-md">
+<!-- Progress Bar 1 -->
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-xs text-on-surface-variant">
+<span>Tarefas Concluídas</span>
+<span>70%</span>
+</div>
+<div class="w-full h-4 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full progress-gradient rounded-full w-[70%] shadow-[0_0_10px_rgba(213,82,163,0.5)]"></div>
+</div>
+</div>
+<!-- Progress Bar 2 -->
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-xs text-on-surface-variant">
+<span>Alta Prioridade</span>
+<span>45%</span>
+</div>
+<div class="w-full h-4 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full w-[45%]"></div>
+</div>
+</div>
+</div>
+<!-- Aesthetic Chart Element -->
+<div class="mt-lg flex justify-center">
+<div class="w-32 h-32 rounded-full border-[12px] border-white/5 flex items-center justify-center relative">
+<div class="absolute inset-0 rounded-full border-[12px] border-primary border-t-transparent border-r-transparent rotate-45"></div>
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-on-surface">14</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">TAREFAS</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-lg left-0 right-0 z-50 flex justify-around items-center px-gutter py-xs mx-auto max-w-md bg-white/10 dark:bg-surface/10 backdrop-blur-xl border border-white/20 dark:border-outline-variant/20 rounded-full shadow-[0_8px_32px_0_rgba(26,0,70,0.37)]">
+<button class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">account_balance</span>
+</button>
+<button class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">payments</span>
+</button>
+<button class="flex items-center justify-center bg-primary text-on-primary rounded-full p-3 shadow-[0_0_15px_rgba(131,28,145,0.5)] active:scale-90 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pie_chart</span>
+</button>
+<button class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">lightbulb</span>
+</button>
+<button class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined">target</span>
+</button>
+</nav>
+</body></html>

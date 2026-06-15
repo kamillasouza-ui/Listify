@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listify App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="smartphone-container">
+        
+        <section id="screen-login" class="screen active">
+            <div class="logo-container" onclick="navigateTo('screen-sugestao')" style="cursor: pointer;">
+                <i data-lucide="infinity" class="logo-icon"></i>
+                <h1>Listify</h1>
+            </div>
+            
+            <button type="button" class="btn-primary" onclick="navigateTo('screen-sugestao')">VAMOS COMEÇAR</button>
+            
+            <div class="form-group">
+                <label>Login</label>
+                <input type="text" placeholder="Seu usuário ou email">
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" placeholder="********">
+            </div>
+
+            <div class="badge-top" onclick="navigateTo('screen-perfil')" style="cursor: pointer;">
+                <h2>TOP 1 !!!!!!</h2>
+                <p>DO BRASIL</p>
+            </div>
+
+            <p class="footer-text">O Listify te lembra de tudo pra você não esquecer de nada!!!</p>
+            
+            <div class="social-login">
+                <span>CONTINUAR COM:</span>
+                <div class="social-icons">
+                    <button type="button" class="icon-circle" onclick="navigateTo('screen-sugestao')"><i data-lucide="apple"></i></button>
+                    <button type="button" class="icon-circle" onclick="navigateTo('screen-sugestao')"><i data-lucide="chrome"></i></button>
+                    <button type="button" class="icon-circle" onclick="navigateTo('screen-sugestao')"><i data-lucide="smartphone"></i></button>
+                    <button type="button" class="icon-circle" onclick="navigateTo('screen-sugestao')"><i data-lucide="message-circle"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="screen-sugestao" class="screen">
+            <header class="app-header">
+                <div onclick="navigateTo('screen-tarefas')" style="cursor:pointer; display:flex; align-items:center; gap:5px;">
+                    <i data-lucide="infinity" class="logo-mini"></i> <span class="brand-name">Listify</span>
+                </div>
+                <img src="https://i.pravatar.cc/100?img=32" alt="Avatar" class="avatar-header" onclick="navigateTo('screen-perfil')">
+            </header>
+            
+            <h2 class="welcome-title">Bom diaaaa e Bem vindo!!!!!!!!</h2>
+            
+            <div class="card-prompt" onclick="navigateTo('screen-nova-tarefa')" style="cursor: pointer;">
+                <i data-lucide="sparkles" class="spark-icon"></i>
+                <p>Para começar, o que você está pensando para esta noite?</p>
+            </div>
+
+            <div class="suggestion-list">
+                <button type="button" class="btn-suggestion" onclick="navigateTo('screen-tarefas')">Jantar às 19?</button>
+                <button type="button" class="btn-suggestion" onclick="navigateTo('screen-tarefas')">Rever e-mails?</button>
+                <button type="button" class="btn-suggestion" onclick="navigateTo('screen-tarefas')">Bebidas com amigos?</button>
+                <button type="button" class="btn-suggestion" onclick="navigateTo('screen-tarefas')">Academia?</button>
+            </div>
+
+            <div class="card-bottom" onclick="navigateTo('screen-tarefas')" style="cursor: pointer;">
+                <div class="card-bottom-header">
+                    <i data-lucide="expand"></i>
+                    <i data-lucide="shrink"></i>
+                </div>
+                <h3>Suas sugestões</h3>
+                <div class="placeholder-line"></div>
+            </div>
+            
+            <button type="button" class="fab-btn" onclick="navigateTo('screen-nova-tarefa')"><i data-lucide="plus"></i></button>
+        </section>
+
+        <section id="screen-tarefas" class="screen">
+            <header class="app-header">
+                <div onclick="navigateTo('screen-sugestao')" style="cursor:pointer; display:flex; align-items:center; gap:5px;">
+                    <i data-lucide="infinity" class="logo-mini"></i> <span class="brand-name">Listify</span>
+                </div>
+                <div class="header-actions">
+                    <i data-lucide="search" style="margin-right: 15px; cursor: pointer;" onclick="navigateTo('screen-sugestao')"></i>
+                    <img src="https://i.pravatar.cc/100?img=32" alt="Avatar" class="avatar-header" onclick="navigateTo('screen-perfil')">
+                </div>
+            </header>
+            
+            <h2 class="section-title">Minhas Tarefas</h2>
+            
+            <div class="tab-container">
+                <button type="button" class="tab-btn active" onclick="filterTasks('todas')">Todas (7)</button>
+                <button type="button" class="tab-btn" onclick="filterTasks('pendentes')">Pendentes (4)</button>
+                <button type="button" class="tab-btn" onclick="filterTasks('concluidas')">Concluídas</button>
+            </div>
+
+            <div class="task-list">
+                <div class="task-item" onclick="navigateTo('screen-detalhe')">
+                    <div class="task-icon bg-pink"><i data-lucide="ice-cream"></i></div>
+                    <span class="task-name">Hora do sorvete</span>
+                    <button type="button" class="task-action-btn"><i data-lucide="x"></i></button>
+                </div>
+                <div class="task-item" onclick="navigateTo('screen-detalhe')">
+                    <div class="task-icon bg-pink"><i data-lucide="paw-print"></i></div>
+                    <span class="task-name">Levar a gata pra sair</span>
+                    <div class="circle-check"></div>
+                </div>
+                <div class="task-item" onclick="navigateTo('screen-detalhe')">
+                    <div class="task-icon bg-purple"><i data-lucide="smile"></i></div>
+                    <span class="task-name">Levar na escola</span>
+                    <div class="circle-check"></div>
+                </div>
+                <div class="task-item" onclick="navigateTo('screen-detalhe')">
+                    <div class="task-icon bg-purple"><i data-lucide="briefcase"></i></div>
+                    <span class="task-name">Trabalhar</span>
+                    <div class="circle-check"></div>
+                </div>
+                <div class="task-item" onclick="navigateTo('screen-detalhe')">
+                    <div class="task-icon bg-pink"><i data-lucide="shirt"></i></div>
+                    <span class="task-name">Ir no shopping</span>
+                    <button type="button" class="task-action-btn"><i data-lucide="x"></i></button>
+                </div>
+                <div class="task-item" onclick="navigateTo('screen-detalhe')">
+                    <div class="task-icon bg-pink"><i data-lucide="shopping-cart"></i></div>
+                    <span class="task-name">Ir no mercado</span>
+                    <div class="circle-check"></div>
+                </div>
+                <div class="task-item" onclick="navigateTo('screen-detalhe')">
+                    <div class="task-icon bg-purple"><i data-lucide="swords"></i></div>
+                    <span class="task-name">Aula de box</span>
+                    <button type="button" class="task-action-btn"><i data-lucide="plus"></i></button>
+                </div>
+            </div>
+
+            <button type="button" class="fab-btn" onclick="navigateTo('screen-nova-tarefa')"><i data-lucide="plus"></i></button>
+        </section>
+
+        <section id="screen-detalhe" class="screen">
+            <header class="detalhe-header">
+                <div class="user-info-mini" onclick="navigateTo('screen-tarefas')" style="cursor: pointer;">
+                    <span class="all-inclusive">all_inclusive Listify <i data-lucide="bell"></i></span>
+                </div>
+                <img src="https://i.pravatar.cc/100?img=32" alt="Avatar" class="avatar-header right" onclick="navigateTo('screen-perfil')">
+            </header>
+
+            <div class="icon-pill-bar">
+                <div class="pill-active" onclick="navigateTo('screen-nova-tarefa')" style="cursor: pointer;"><i data-lucide="calendar"></i></div>
+                <i data-lucide="chevron-right"></i>
+                <i data-lucide="map-pin" onclick="navigateTo('screen-sugestao')" style="cursor: pointer;"></i>
+                <i data-lucide="wifi" onclick="navigateTo('screen-sugestao')" style="cursor: pointer;"></i>
+                <i data-lucide="battery-charging" onclick="navigateTo('screen-perfil')" style="cursor: pointer;"></i>
+            </div>
+
+            <h2 class="section-title">Detalhes de suas tarefas:</h2>
+
+            <div class="detail-cards-container">
+                <div class="detail-card">
+                    <p><strong>Hora do Sorvete:</strong> levar o filho pra tomar sorvete depois da escola.</p>
+                </div>
+                <div class="detail-card">
+                    <p><strong>Ir no shopping:</strong> comprar o presente do dia das mães</p>
+                </div>
+                <div class="detail-card">
+                    <p><strong>Aula de box:</strong> Professor novo vai iniciar.</p>
+                </div>
+            </div>
+
+            <div class="action-buttons-vertical">
+                <button type="button" class="btn-action-filled" onclick="navigateTo('screen-tarefas')">Concluída</button>
+                <button type="button" class="btn-action-outline" onclick="navigateTo('screen-nova-tarefa')">Editar</button>
+                <button type="button" class="btn-action-outline alert-border" onclick="navigateTo('screen-tarefas')">Excluir</button>
+            </div>
+
+            <div class="progress-box" onclick="navigateTo('screen-perfil')" style="cursor: pointer;">
+                <div class="progress-header">
+                    <span>PROGRESSO SEMANAL</span>
+                    <span class="fraction">14/20</span>
+                </div>
+                <h2 class="progress-percentage">70% Concluído</h2>
+                
+                <div class="progress-bar-group">
+                    <div class="bar-label"><span>Tarefas Concluídas</span> <span>70%</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 70%;"></div></div>
+                </div>
+                <div class="progress-bar-group">
+                    <div class="bar-label"><span>Alta Prioridade</span> <span>45%</span></div>
+                    <div class="bar-track"><div class="bar-fill high-priority" style="width: 45%;"></div></div>
+                </div>
+
+                <div class="radial-progress-container">
+                    <div class="radial-progress">
+                        <div class="radial-inner">
+                            <span class="radial-num">14</span>
+                            <span class="radial-sub">TAREFAS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screen-nova-tarefa" class="screen">
+            <header class="modal-header">
+                <h2>Criar Nova Tarefa</h2>
+                <button type="button" class="close-modal" onclick="navigateTo('screen-tarefas')"><i data-lucide="x"></i></button>
+            </header>
+
+            <div class="hero-prompt-card">
+                <h3>O que vamos realizar hoje?</h3>
+            </div>
+
+            <div class="calendar-strip">
+                <div class="day-card" onclick="selectDay(this)"><span>SEG</span><strong>12</strong></div>
+                <div class="day-card" onclick="selectDay(this)"><span>TER</span><strong>13</strong></div>
+                <div class="day-card active" onclick="selectDay(this)"><span>QUA</span><strong>14</strong></div>
+                <div class="day-card" onclick="selectDay(this)"><span>QUI</span><strong>15</strong></div>
+                <div class="day-card" onclick="selectDay(this)"><span>SEX</span><strong>16</strong></div>
+            </div>
+
+            <div class="categories-section">
+                <label class="section-label">CATEGORIA</label>
+                <div class="category-grid">
+                    <button type="button" class="category-btn" onclick="selectCategory(this)"><i data-lucide="briefcase"></i> Work</button>
+                    <button type="button" class="category-btn" onclick="selectCategory(this)"><i data-lucide="book-open"></i> Study</button>
+                    <button type="button" class="category-btn" onclick="selectCategory(this)"><i data-lucide="gamepad-2"></i> Leisure</button>
+                    <button type="button" class="category-btn" onclick="selectCategory(this)"><i data-lucide="heart"></i> Health</button>
+                </div>
+            </div>
+
+            <div class="urgency-section">
+                <div class="urgency-header">
+                    <label class="section-label">NÍVEL DE URGÊNCIA</label>
+                    <span class="urgency-value" id="urgency-label">Alta</span>
+                </div>
+                <input type="range" min="1" max="3" value="3" class="urgency-slider" id="urgency-input" oninput="updateUrgency(this.value)">
+            </div>
+
+            <button type="button" class="btn-save-task" onclick="navigateTo('screen-tarefas')">SALVAR TAREFA <i data-lucide="check-circle-2"></i></button>
+        </section>
+
+        <section id="screen-perfil" class="screen">
+            <header class="app-header">
+                <div class="header-left" onclick="navigateTo('screen-tarefas')" style="cursor: pointer;">
+                    <span class="brand-name">Listify</span>
+                </div>
+                <i data-lucide="settings" class="settings-icon" onclick="navigateTo('screen-sugestao')" style="cursor: pointer;"></i>
+            </header>
+
+            <div class="profile-hero" onclick="navigateTo('screen-detalhe')" style="cursor: pointer;">
+                <div class="avatar-large-container">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Alex" class="avatar-large">
+                </div>
+                <h2 class="profile-name">Alex</h2>
+                <span class="profile-badge">Mestre do Foco - Nível 12</span>
+            </div>
+
+            <div class="xp-container" onclick="navigateTo('screen-detalhe')" style="cursor: pointer;">
+                <div class="xp-radial">
+                    <div class="xp-inner">
+                        <strong>2.4k</strong>
+                        <span>/ 3k XP</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="medal-title">Minhas Medalhas</h3>
+            <div class="medals-grid">
+                <div class="medal-card" onclick="navigateTo('screen-tarefas')">
+                    <div class="medal-icon"><i data-lucide="paw-print"></i></div>
+                    <span>Semana Perfeita</span>
+                </div>
+                <div class="medal-card" onclick="navigateTo('screen-tarefas')">
+                    <div class="medal-icon"><i data-lucide="award"></i></div>
+                    <span>Madrugador</span>
+                </div>
+                <div class="medal-card" onclick="navigateTo('screen-tarefas')">
+                    <div class="medal-icon"><i data-lucide="sparkles"></i></div>
+                    <span>Foco Total</span>
+                </div>
+                <div class="medal-card" onclick="navigateTo('screen-tarefas')">
+                    <div class="medal-icon"><i data-lucide="globe"></i></div>
+                    <span>Explorador</span>
+                </div>
+            </div>
+
+            <div class="menu-list">
+                <button type="button" class="menu-item" onclick="navigateTo('screen-sugestao')">
+                    <div class="menu-item-left"><i data-lucide="bell"></i> <span>Notificações Fofas</span></div>
+                    <i data-lucide="chevron-right"></i>
+                </button>
+                <button type="button" class="menu-item" onclick="navigateTo('screen-sugestao')">
+                    <div class="menu-item-left"><i data-lucide="palette"></i> <span>Alterar Tema</span></div>
+                    <i data-lucide="chevron-right"></i>
+                </button>
+                <button type="button" class="menu-item logout" onclick="navigateTo('screen-login')">
+                    <div class="menu-item-left"><i data-lucide="log-out"></i> <span>Sair da Conta</span></div>
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <nav class="bottom-nav" id="global-nav">
+            <button type="button" class="nav-item" onclick="navigateTo('screen-tarefas')"><i data-lucide="landmark"></i></button>
+            <button type="button" class="nav-item" onclick="navigateTo('screen-sugestao')"><i data-lucide="wallet"></i></button>
+            <button type="button" class="nav-item central-nav" onclick="navigateTo('screen-tarefas')"><i data-lucide="pie-chart"></i></button>
+            <button type="button" class="nav-item" onclick="navigateTo('screen-sugestao')"><i data-lucide="lightbulb"></i></button>
+            <button type="button" class="nav-item" onclick="navigateTo('screen-perfil')"><i data-lucide="user"></i></button>
+        </nav>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

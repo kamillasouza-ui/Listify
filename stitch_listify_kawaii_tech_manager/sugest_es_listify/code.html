@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#50424f",
+                        "inverse-on-surface": "#391e70",
+                        "on-secondary": "#610045",
+                        "surface-bright": "#432879",
+                        "secondary-container": "#880762",
+                        "primary-container": "#831c91",
+                        "primary-fixed-dim": "#fcaaff",
+                        "secondary-fixed": "#ffd8e9",
+                        "on-secondary-fixed": "#3c0029",
+                        "surface-tint": "#fcaaff",
+                        "tertiary-fixed-dim": "#ffafd5",
+                        "on-primary-fixed-variant": "#7a0f88",
+                        "secondary-fixed-dim": "#ffaed8",
+                        "on-tertiary-container": "#ffa5d1",
+                        "surface-variant": "#3e2375",
+                        "background": "#1a0046",
+                        "outline": "#9d8c9a",
+                        "primary-fixed": "#ffd6fc",
+                        "on-secondary-container": "#ff92cf",
+                        "surface": "#1a0046",
+                        "secondary": "#ffaed8",
+                        "surface-container-lowest": "#140039",
+                        "on-primary-container": "#faa0ff",
+                        "surface-container-highest": "#3e2375",
+                        "on-primary-fixed": "#36003e",
+                        "primary": "#fcaaff",
+                        "tertiary-fixed": "#ffd8e8",
+                        "surface-container-high": "#331669",
+                        "inverse-surface": "#eaddff",
+                        "tertiary": "#ffafd5",
+                        "surface-container": "#28065f",
+                        "on-secondary-fixed-variant": "#880762",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-background": "#eaddff",
+                        "on-surface-variant": "#d4c1d1",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#941366",
+                        "on-surface": "#eaddff",
+                        "surface-dim": "#1a0046",
+                        "surface-container-low": "#24005b",
+                        "on-primary": "#580064",
+                        "inverse-primary": "#9631a3",
+                        "on-tertiary-fixed": "#3d0027",
+                        "on-tertiary-fixed-variant": "#89035e",
+                        "on-tertiary": "#620042",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "lg": "40px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "container-padding": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Sora"],
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1.1", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .kawaii-glow {
+            box-shadow: 0 0 20px rgba(252, 170, 255, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen font-body-md selection:bg-primary-container selection:text-white">
+<!-- Top Navigation -->
+<header class="w-full top-0 sticky z-50 bg-white/10 dark:bg-surface/10 backdrop-blur-xl border-b border-white/20 dark:border-outline-variant/20 shadow-[0_8px_32px_0_rgba(26,0,70,0.37)]">
+<div class="flex justify-between items-center px-container-padding py-sm w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-xs active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-[32px] drop-shadow-[0_0_8px_rgba(252,170,255,0.8)]" data-icon="all_inclusive">all_inclusive</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary drop-shadow-[0_0_8px_rgba(252,170,255,0.8)]">Listify</h1>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary/40 overflow-hidden active:scale-95 duration-200 cursor-pointer">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A portrait of a stylish young person with a friendly expression, set against a vibrant, soft-focus background of neon pink and purple lights. The lighting is ethereal and flattering, echoing the Kawaii Tech aesthetic with high-key pastel tones. The style is professional digital photography with a modern, youthful vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC13G1EwKJgU2S-rDhg-NTQ4kCYy5hrmXLCiWdQMihkXO5ZRsavQv9yabrOvwFEFRY5hqQfED2C3cyKVQ9TEyZQBK94oNdBMFXSsfqGEHZ0qaHcPPE5CTS36vGWKGb8QkbBKDc_VYMJ7xZzPFym5dSx8Fobf10x3RTC1qHF7ZHOqf5F-S3Ybd7-edU5DFocooZrnn0Cxk3TCCfpvNVe4LC1b-igYal0IYW2WYyM6pHK9xRLvODbvkQeOFu54qdUmyH4fVG7qeDMajEX"/>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto px-container-padding py-xl pb-32">
+<!-- Welcome Message -->
+<section class="mb-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed mb-xs">
+                Bom diaaaa e Bem vindo!!!!!!!!
+            </h2>
+<div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</section>
+<!-- Central Question Glass Card -->
+<section class="glass-card rounded-xl p-md mb-xl kawaii-glow border-secondary/30">
+<div class="flex flex-col gap-base items-center text-center">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="font-headline-md text-headline-md text-white/90 leading-tight">
+                    Para começar, o que você está pensando para esta noite?
+                </p>
+</div>
+</section>
+<!-- Vertical Pill Suggestions -->
+<section class="flex flex-col gap-md mb-xl">
+<button class="w-full py-md px-lg rounded-full border-2 border-secondary/40 glass-card text-on-surface font-label-md text-label-md hover:bg-white/10 active:scale-95 transition-all flex justify-between items-center group">
+                Jantar às 19?
+                <span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="restaurant">restaurant</span>
+</button>
+<button class="w-full py-md px-lg rounded-full border-2 border-secondary/40 glass-card text-on-surface font-label-md text-label-md hover:bg-white/10 active:scale-95 transition-all flex justify-between items-center group">
+                Rever e-mails?
+                <span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="mail">mail</span>
+</button>
+<button class="w-full py-md px-lg rounded-full border-2 border-secondary/40 glass-card text-on-surface font-label-md text-label-md hover:bg-white/10 active:scale-95 transition-all flex justify-between items-center group">
+                Bebidas com amigos?
+                <span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="local_bar">local_bar</span>
+</button>
+<button class="w-full py-md px-lg rounded-full border-2 border-secondary/40 glass-card text-on-surface font-label-md text-label-md hover:bg-white/10 active:scale-95 transition-all flex justify-between items-center group">
+                Academia?
+                <span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="fitness_center">fitness_center</span>
+</button>
+</section>
+<!-- Textured Expansion Area -->
+<section class="glass-card rounded-t-xl p-md border-b-0 border-white/10 flex flex-col items-center gap-sm">
+<div class="flex gap-lg text-primary-fixed mb-xs">
+<span class="material-symbols-outlined text-4xl" data-icon="open_in_full">open_in_full</span>
+<span class="material-symbols-outlined text-4xl" data-icon="close_fullscreen">close_fullscreen</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface-variant">Suas sugestões</h3>
+<!-- Placeholder for suggested content flow -->
+<div class="w-full space-y-md mt-md opacity-40">
+<div class="h-16 w-full glass-card rounded-lg flex items-center px-md gap-md">
+<div class="w-10 h-10 rounded-full bg-primary/20"></div>
+<div class="h-4 w-3/4 bg-white/10 rounded-full"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-lg left-0 right-0 z-50 flex justify-around items-center px-gutter py-xs mx-auto max-w-md bg-white/10 dark:bg-surface/10 backdrop-blur-xl rounded-full border border-white/20 dark:border-outline-variant/20 shadow-[0_8px_32px_0_rgba(26,0,70,0.37)] w-[calc(100%-48px)]">
+<div class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div class="flex items-center justify-center bg-primary text-on-primary rounded-full p-3 shadow-[0_0_15px_rgba(131,28,145,0.5)] active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="pie_chart" style="font-variation-settings: 'FILL' 1;">pie_chart</span>
+</div>
+<div class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+</div>
+<div class="flex items-center justify-center text-on-surface-variant p-3 hover:bg-white/5 transition-colors active:scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="target">target</span>
+</div>
+</nav>
+<!-- Floating Action Button for Dashboard -->
+<div class="fixed bottom-32 right-container-padding z-40">
+<button class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container shadow-xl flex items-center justify-center active:scale-95 duration-200 kawaii-glow">
+<span class="material-symbols-outlined text-4xl" data-icon="add">add</span>
+</button>
+</div>
+</body></html>

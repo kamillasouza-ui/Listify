@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Listify - Vamos Começar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#50424f",
+                    "inverse-on-surface": "#391e70",
+                    "on-secondary": "#610045",
+                    "surface-bright": "#432879",
+                    "secondary-container": "#880762",
+                    "primary-container": "#831c91",
+                    "primary-fixed-dim": "#fcaaff",
+                    "secondary-fixed": "#ffd8e9",
+                    "on-secondary-fixed": "#3c0029",
+                    "surface-tint": "#fcaaff",
+                    "tertiary-fixed-dim": "#ffafd5",
+                    "on-primary-fixed-variant": "#7a0f88",
+                    "secondary-fixed-dim": "#ffaed8",
+                    "on-tertiary-container": "#ffa5d1",
+                    "surface-variant": "#3e2375",
+                    "background": "#1a0046",
+                    "outline": "#9d8c9a",
+                    "primary-fixed": "#ffd6fc",
+                    "on-secondary-container": "#ff92cf",
+                    "surface": "#1a0046",
+                    "secondary": "#ffaed8",
+                    "surface-container-lowest": "#140039",
+                    "on-primary-container": "#faa0ff",
+                    "surface-container-highest": "#3e2375",
+                    "on-primary-fixed": "#36003e",
+                    "primary": "#fcaaff",
+                    "tertiary-fixed": "#ffd8e8",
+                    "surface-container-high": "#331669",
+                    "inverse-surface": "#eaddff",
+                    "tertiary": "#ffafd5",
+                    "surface-container": "#28065f",
+                    "on-secondary-fixed-variant": "#880762",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "on-background": "#eaddff",
+                    "on-surface-variant": "#d4c1d1",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#941366",
+                    "on-surface": "#eaddff",
+                    "surface-dim": "#1a0046",
+                    "surface-container-low": "#24005b",
+                    "on-primary": "#580064",
+                    "inverse-primary": "#9631a3",
+                    "on-tertiary-fixed": "#3d0027",
+                    "on-tertiary-fixed-variant": "#89035e",
+                    "on-tertiary": "#620042",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "lg": "40px",
+                    "gutter": "16px",
+                    "base": "8px",
+                    "container-padding": "24px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Sora"],
+                    "headline-lg-mobile": ["Sora"],
+                    "headline-lg": ["Sora"],
+                    "label-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1.1", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .kawaii-glow {
+            filter: drop-shadow(0 0 8px rgba(252, 170, 255, 0.8));
+        }
+        .main-gradient {
+            background: radial-gradient(circle at 50% 50%, #28065f 0%, #1a0046 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background main-gradient min-h-screen selection:bg-primary selection:text-on-primary">
+<!-- Screen Wrapper -->
+<div class="relative w-full max-w-md mx-auto min-h-screen flex flex-col p-container-padding pb-lg overflow-x-hidden">
+<!-- Header Section -->
+<header class="flex flex-col items-center mt-lg mb-xl space-y-md">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-full blur-3xl group-hover:bg-primary-container/40 transition-all duration-500"></div>
+<span class="material-symbols-outlined text-[64px] text-primary kawaii-glow" data-icon="all_inclusive">all_inclusive</span>
+</div>
+<div class="text-center">
+<h1 class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Listify</h1>
+</div>
+<button class="bg-primary-container text-on-primary-container font-headline-md text-body-lg px-xl py-md rounded-full shadow-[0_0_20px_rgba(131,28,145,0.6)] hover:scale-105 active:scale-95 transition-all duration-200">
+                VAMOS COMEÇAR
+            </button>
+</header>
+<!-- Main Content Canvas (Login Form) -->
+<main class="flex-grow flex flex-col space-y-lg">
+<div class="space-y-md">
+<div class="flex flex-col space-y-xs">
+<label class="font-label-md text-label-md ml-xs text-on-surface-variant">Login</label>
+<input class="w-full bg-white/10 border border-white/20 rounded-lg p-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-md transition-all" placeholder="Seu usuário ou email" type="text"/>
+</div>
+<div class="flex flex-col space-y-xs">
+<label class="font-label-md text-label-md ml-xs text-on-surface-variant">Senha</label>
+<input class="w-full bg-white/10 border border-white/20 rounded-lg p-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-md transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Bento / Glass Promo Card -->
+<section class="glass-card rounded-xl p-lg flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl -mr-16 -mt-16"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-tertiary/10 blur-3xl -ml-16 -mb-16"></div>
+<div class="relative z-10 text-center space-y-xs">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold italic text-primary leading-tight drop-shadow-md">
+                        TOP 1 !!!!!!
+                    </h2>
+<p class="font-label-md text-label-md tracking-[0.2em] text-tertiary uppercase">
+                        DO BRASIL
+                    </p>
+</div>
+</section>
+<p class="font-body-md text-body-md text-center text-on-surface-variant/80 px-md">
+                O Listify te lembra de tudo pra você não esquecer de nada!!!
+            </p>
+</main>
+<!-- Footer / Social Login Section -->
+<footer class="mt-xl flex flex-col items-center space-y-lg">
+<div class="w-full flex items-center space-x-md">
+<div class="h-[1px] flex-grow bg-white/10"></div>
+<span class="font-label-sm text-label-sm text-outline-variant whitespace-nowrap uppercase tracking-widest">Continuar com:</span>
+<div class="h-[1px] flex-grow bg-white/10"></div>
+</div>
+<div class="flex justify-center items-center space-x-lg">
+<!-- Social Icons with Glass Effect -->
+<a class="w-14 h-14 glass-card rounded-full flex items-center justify-center hover:bg-white/20 transition-colors group" href="#">
+<img alt="Apple" class="w-6 h-6 invert opacity-80 group-hover:opacity-100" data-alt="A clean, minimalist 3D rendering of the Apple logo made of translucent frosted glass, floating against a deep purple background with soft magenta highlights. The aesthetic is high-tech yet approachable, matching a Kawaii digital product design system with soft lighting and smooth gradients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdENAZMpgTqeF6xztub45KRcfbTzt1vYbuBeMGrDDCVwOxxPP7Cfdgao2WHgbLNMKDagr0-UFMd4XuafdL1PjI1PpjpsxoGK2NW1dkSgZnKE9HbnxsXFQiPwtz_9QXB19f9w-ZZ-9pm8B9qOglcJOAYle3lw9ZjW43lUHqPj21MugIpmTc_2yTRcswaWl0AYhZGY7as9IbZBC4u6UG2fW3KSBVwc9hyAGrKKFOt7MlNr3YYpNpztDN9Co7SUUScMVzhRACE7qtScsZ"/>
+</a>
+<a class="w-14 h-14 glass-card rounded-full flex items-center justify-center hover:bg-white/20 transition-colors group" href="#">
+<img alt="Google" class="w-6 h-6 opacity-80 group-hover:opacity-100" data-alt="A vibrant 3D Google 'G' icon with a playful, glossy finish that mimics a candy-like texture. It is set against a dreamy background of soft neon pink and deep violet cosmic dust. The style is modern tech-kawaii, featuring smooth edges and an immersive depth that feels both professional and youthful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRVhHgyt56MZpblBXWgO4iIU_qTNXW19qc-PMrR9IB8auuL8f4-FSKDXlrT-qpepxmUDvs3hfsKEMslwbc9z2jd_ItIcGOC3FX4UVKLrrjds5-UlNLyQ8DSpb838Qrvc6Y-cU8XF4tamOs5AUDOzAhoL6SRuFExATNIsV_s3MahNOBuqV6GIGJCR-NXxVOiXk6oSf8J0lUmgK_GHLSZKY0Ep_4rmOSaor72CL7-pjUgXeZDp8UutG6cMgRNxi1Z7pm5peja_n7LMVW"/>
+</a>
+<a class="w-14 h-14 glass-card rounded-full flex items-center justify-center hover:bg-white/20 transition-colors group" href="#">
+<img alt="TikTok" class="w-6 h-6 invert opacity-80 group-hover:opacity-100" data-alt="A stylized TikTok music note icon reimagined as a digital neon sculpture with light trails. The surrounding environment is a deep, immersive space with soft magenta bokeh and glassmorphic layers. The lighting is soft and cinematic, emphasizing a modern mobile application's energetic and creative vibe within a luxury UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNJZJgIR28bjRKoI9uN9Odg8lGOKuEjGooV8-RFvomWYdYyBY1R4eG7jmww6ji70HOW7AIy5Aq5nsmBoKtfkYRiGl7WHNCgcVozkAND28e37j9nMZT50mSCudZAvkEYPYwO-kqsWQJDJrI3ZMs2cMBdoCeU6-nPz234Uxacnrg2r28YYQV88Yw_hleETX6o_VMOt5OgxR3Ck7WLmQ-WKQ8JNWwgUM1eJdAIkkVSbf6PGD_VxAXdQTXMsylJKRyFvQTv5w6MO_4lHUa"/>
+</a>
+<a class="w-14 h-14 glass-card rounded-full flex items-center justify-center hover:bg-white/20 transition-colors group" href="#">
+<img alt="Facebook" class="w-6 h-6 opacity-80 group-hover:opacity-100" data-alt="A glossy, spherical Facebook 'f' icon resting on a translucent glass surface that reflects a soft purple light. The scene is illuminated from above by a warm pink glow, creating a serene and welcoming tech-kawaii aesthetic. Every detail is crisp and polished, symbolizing a secure and friendly user experience in a futuristic mobile app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAMMZqaehPxscNikW2B_3efCSJccQzRo9OVccCSJSjeD5QKyiQv9dwznYKyBP48Q6VZ1D55QFbBWNyRl0CxZZynSDIWUMelKbjkaXI2Idvxj6vNYPE9Gfo5JfeRdOg92IZjQ12ynJQN21KPVHm5p4BtoOj_DyPbk1WaBhS_l4v2oBk70rRT69vcPeXOXU43NvQe7aUtKf7kE-76HVvlXqhWEdJk6c17acd4w6r2lZpcSI50sM9RvzT2o2QIf6Cb1D0O_dOTh5bS0sy"/>
+</a>
+</div>
+</footer>
+<!-- Background Decor -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+<div class="absolute top-[10%] left-[-20%] w-[80%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[5%] right-[-20%] w-[80%] h-[40%] bg-secondary-container/10 blur-[120px] rounded-full"></div>
+</div>
+</div>
+</body></html>

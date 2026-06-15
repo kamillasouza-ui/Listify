@@ -1,0 +1,746 @@
+:root {
+    --bg-gradient: linear-gradient(180deg, #18003c 0%, #0d0122 100%);
+    --purple-primary: #8a2be2;
+    --purple-light: #b666d2;
+    --neon-pink: #ff007f;
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-white: #ffffff;
+    --text-muted: #a59cb5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #050014;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-white);
+}
+
+.smartphone-container {
+    width: 380px;
+    height: 820px;
+    background: var(--bg-gradient);
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #251c3a;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    overflow-y: auto;
+    padding-bottom: 90px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.screen::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* APP HEADER */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fca5f1;
+    text-shadow: 0 0 10px rgba(252, 165, 241, 0.5);
+}
+
+.avatar-header {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--neon-pink);
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f7cbff;
+}
+
+/* FORMULÁRIO LOGIN */
+.form-group {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 14px;
+    border-radius: 16px;
+    color: white;
+    outline: none;
+}
+
+.btn-primary {
+    background: #8e1bb0;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(142, 27, 176, 0.6);
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* COMPONENTES DE LOGIN */
+#screen-login {
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    color: #ff76ef;
+    filter: drop-shadow(0 0 10px #ff76ef);
+}
+
+.badge-top {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.badge-top h2 {
+    font-style: italic;
+    font-size: 28px;
+    color: white;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-login {
+    text-align: center;
+    width: 100%;
+}
+
+.social-login span {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* TELA SUGESTÃO */
+.welcome-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--neon-pink);
+    width: max-content;
+    padding-bottom: 4px;
+}
+
+.card-prompt {
+    background: rgba(43, 23, 76, 0.6);
+    border-radius: 24px;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    margin-bottom: 20px;
+}
+
+.spark-icon {
+    color: #fdb7ff;
+    margin-bottom: 10px;
+}
+
+.btn-suggestion {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    color: white;
+    padding: 16px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.card-bottom {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.card-bottom-header {
+    display: flex;
+    gap: 10px;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.placeholder-line {
+    height: 12px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    margin-top: 12px;
+    width: 60%;
+}
+
+.fab-btn {
+    position: absolute;
+    bottom: 90px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fca5f1;
+    border: none;
+    color: #18003c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(252, 165, 241, 0.4);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* TELA LISTA DE TAREFAS */
+.tab-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.tab-btn.active {
+    background: #fca5f1;
+    color: #18003c;
+    font-weight: bold;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.task-item:hover {
+    transform: scale(1.02);
+}
+
+.task-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-pink { background-color: #a01a5e; }
+.bg-purple { background-color: #5e1a90; }
+
+.task-name {
+    flex: 1;
+    margin-left: 14px;
+    font-size: 15px;
+}
+
+.task-action-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle-check {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* TELA DETALHE */
+.detalhe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.all-inclusive {
+    color: #fca5f1;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.icon-pill-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: max-content;
+    color: var(--text-muted);
+}
+
+.pill-active {
+    background: var(--purple-primary);
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: white;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.action-buttons-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-action-filled {
+    background: #8e1bb0;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-action-outline {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.alert-border {
+    border-color: rgba(255, 0, 127, 0.4);
+}
+
+.progress-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 28px;
+    padding: 20px;
+    margin-top: 24px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.progress-percentage {
+    font-size: 24px;
+    margin: 6px 0 16px 0;
+}
+
+.progress-bar-group {
+    margin-bottom: 12px;
+}
+
+.bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.bar-track {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff007f, #b666d2);
+}
+
+.bar-fill.high-priority {
+    background: #a01a5e;
+}
+
+.radial-progress-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.radial-progress {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: conic-gradient(#fca5f1 70%, rgba(255,255,255,0.1) 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radial-inner {
+    width: 76px;
+    height: 76px;
+    background: #140827;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.radial-num { font-size: 22px; font-weight: bold; }
+.radial-sub { font-size: 9px; color: var(--text-muted); }
+
+/* TELA NOVA TAREFA */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    background: rgba(255,255,255,0.05);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-prompt-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 30px 20px;
+    border-radius: 24px;
+    margin-bottom: 24px;
+}
+
+.calendar-strip {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.day-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 16px;
+    text-align: center;
+    width: 55px;
+    cursor: pointer;
+}
+
+.day-card.active {
+    background: #8e1bb0;
+    box-shadow: 0 0 10px rgba(142, 27, 176, 0.5);
+}
+
+.day-card span { font-size: 10px; display: block; color: var(--text-muted); }
+.day-card strong { font-size: 18px; }
+
+.section-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.category-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    color: white;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.urgency-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.urgency-slider {
+    width: 100%;
+    accent-color: var(--purple-light);
+}
+
+.btn-save-task {
+    background: #8e1bb0;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* TELA PERFIL */
+.profile-hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar-large {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--neon-pink);
+}
+
+.profile-name { font-size: 24px; margin-top: 10px; }
+.profile-badge {
+    background: rgba(138, 43, 226, 0.3);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #dfb2ff;
+}
+
+.xp-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.xp-radial {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: conic-gradient(#ff76ef 80%, rgba(255,255,255,0.1) 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.xp-inner {
+    width: 96px;
+    height: 96px;
+    background: #110523;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.medal-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.medals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.medal-card {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+}
+
+.medal-icon {
+    color: #ff76ef;
+    margin-bottom: 6px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: none;
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* NAV INFERIOR GLOBAL */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(15, 4, 32, 0.95);
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 100;
+}
+
+.nav-item {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.central-nav {
+    background: #ff76ef;
+    color: #140827;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 118, 239, 0.5);
+}
