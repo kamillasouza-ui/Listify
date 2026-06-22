@@ -12,7 +12,7 @@ Esqueça as listas de tarefas chatas. Com uma interface baseada em *glassmorphis
 
 ## 📱 Interface do Aplicativo
 <div align="center">
-<img width="1200" height="475" alt="Listify Banner" src="https://github.com/kamillasouza-ui/Listify/blob/main/stitch_listify_kawaii_tech_manager/Listify.png?raw=true" />
+<img width="1200" height="475" alt="Listify Banner" src="[https://github.com/kamillasouza-ui/Listify/blob/main/stitch_listify_kawaii_tech_manager/Listify.png?raw=true](https://github.com/kamillasouza-ui/Listify/blob/main/stitch_listify_kawaii_tech_manager/screen.png?raw=true)" />
 </div>" />
 </div>
 ![Tela Inicial do Listify]("https://github.com/kamillasouza-ui/Listify/blob/main/stitch_listify_kawaii_tech_manager/screen.png?raw=true")
