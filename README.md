@@ -1,7 +1,7 @@
 # 🌌 Listify — Organização Sem Estresse, Foco com Estilo!
 
 <div align="center">
-<img width="1200" height="475" alt="Listify Banner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+<img width="1200" height="475" alt="Listify Banner" src="https://github.com/kamillasouza-ui/Listify/blob/main/stitch_listify_kawaii_tech_manager/Listify.png?raw=true" />
 </div>
 
 O **Listify** é um aplicativo de tarefas com estilo cyberpunk que une produtividade, gamificação e um design visual impressionante para transformar a sua rotina diária em uma experiência viciante. 
