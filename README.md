@@ -12,7 +12,7 @@ Esqueça as listas de tarefas chatas. Com uma interface baseada em *glassmorphis
 
 ## 📱 Interface do Aplicativo
 
-![Tela Inicial do Listify](login.jpg)
+![Tela Inicial do Listify]("https://github.com/kamillasouza-ui/Listify/blob/main/stitch_listify_kawaii_tech_manager/screen.png?raw=true")
 *Interface moderna Cyber-Purple com suporte a múltiplos métodos de autenticação de clique único.*
 
 ---
